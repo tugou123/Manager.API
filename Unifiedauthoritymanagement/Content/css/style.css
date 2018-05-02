@@ -1,0 +1,227 @@
+﻿html,body{color:#4a4a4a;font-size:12px; font-family:arial,Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+*{ margin:0;padding:0;}
+.clear{ clear:both;}
+a{ color:#4a4a4a; text-decoration:none;}
+a:visited{ color:#4a4a4a;}
+a:hover{ color:#4a4a4a; text-decoration:none;}
+ol,ul{ list-style:none; margin:0; padding:0;}
+p{ margin:0; padding:0;}
+
+/*设备展示模块css*/
+
+/*三大模块---左侧*/
+.main_left{width:190px;float:left; background:#202432; color:#fff; position:relative;}
+.logo{ padding:15px 0 25px 0; text-align:center;}
+/*左侧导航*/
+.menu{list-style:none;background:url(../images/line.jpg) repeat-x left top;}
+.menu li{background:url(../images/line.jpg) repeat-x left bottom;}
+.menu li a{ line-height:45px;color:#fff; display:block; font-size:14px;}
+.menu li p{padding-left:48px;}
+.menu li a:hover{ background:#e96005;}
+.menu li .current{ background:#e96005;}
+.menu li:first-child p{background:url(../images/menu_cion.png) no-repeat 12px 14px;}
+.menu li:nth-child(2) p{background:url(../images/menu_cion1.png) no-repeat 12px 14px;}
+.menu li:nth-child(3) p{background:url(../images/menu_cion2.png) no-repeat 12px 14px;}
+.menu li:nth-child(4) p{background:url(../images/menu_cion3.png) no-repeat 12px 14px;}
+.menu li:nth-child(5) p{background:url(../images/menu_cion4.png) no-repeat 12px 14px;}
+/*版权*/
+.copyright{ width:100%;position:absolute; bottom:0; padding:18px 10px 0 10px;background:url(../images/line.jpg) repeat-x left top;}
+.copyright div{font-size:12px; height:26px;}
+
+/*三大模块---中间*/
+.main_center{ width:268px; background:#272b3b;float:left;color:#fff;}
+/*楼层信息*/
+.floor_tit{line-height:40px; font-size:14px; background:#323646 url(../images/floor_tit_cion.png) no-repeat 12px 13px; padding-left:40px;}
+.floor_info{ line-height:24px; padding:12px 40px 5px;}
+/*消防设备投入信息*/
+.equipment_tit{background:url(../images/center_line.jpg) repeat-x left bottom; line-height:40px; font-size:14px;}
+.equipment_tit p{ background:url(../images/equipment_tit_cion.png) no-repeat 12px 13px; padding-left:40px;}
+.equipment_tit span{ font-weight:bold; padding-right:3px;}
+
+.equipment{ padding:12px 0 12px 40px;}
+.equipment li{ list-style-type:none; overflow:hidden; line-height:30px; color:#fff; padding-right:10px;}
+.equipment i{ display:inline-block; width:10px; height:10px; float:left; margin:9px 14px 0 0;}
+.equipment i.i_green{ background-color:#1aad19;}
+.equipment i.i_red{ background-color:#f8031a;}
+.equipment i.i_yellow{ background-color:#f09301;}
+.equipment i.i_grey{ background-color:#a9a8a8;}
+.equipment abbr{display:inline-block; margin-left:50px; font-weight:bold;}
+/*消防设备饼图展示*/
+.pie_chart{ padding:20px 12px; background:#232736; margin:12px;}
+.chart{ margin:0 auto; text-align:center; padding-bottom:15px;}
+
+/*三大模块---右侧svg图部分*/
+.main_right{position:relative; margin-left:458px;}
+.main_menu{ border-bottom:1px solid #a2a3a3; line-height:40px; padding:0 12px; position:relative;}
+.main_menu_list{background:url(../images/main_menu_list_cion.png) no-repeat left 10px; padding-left:25px;}
+.main_menu_list a{ margin:0 5px;}
+.main_menu_cion{ position:absolute;right:12px; top:2px; color:#696767; font-size:16px;}
+.main_submenu{background:#2e3344; width:380px; padding:0 12px; position:absolute; top:41px; right:0; color:#fff; display:none; z-index:4;}
+.main_submenu ul{ float:right; width:50%; padding:18px 0;}
+.main_submenu ul li{ line-height:35px;}
+.main_submenu ul li a{ display:block;line-height:35px;color:#fff; padding-left:15px;}
+.main_submenu ul li a:hover{ background:#3d435a;color:#fff;}
+.main_submenu li.haschild span{ float: left; margin:12px 10px 0 0; display: inline-block;   width: 0;   height: 0;   border-top: 4px solid transparent;   border-right:4px solid #b1b0b0;
+    border-bottom:4px solid transparent;}
+.main_submenu ul li a:hover span{ border-right:4px solid #e96005;}
+.main_submenu ul li.current{ background:#3d435a;color:#fff;}	
+.main_submenu ul li.current span{ border-right:4px solid #e96005;}
+.main_submenu li.haschild ul{ position: absolute; left:0; top:0; padding:18px 12px 18px 12px;background:url(../images/submenuline.jpg) repeat-y right top; width:47%;}
+.main_submenu li.haschild ul li{ text-align:center; cursor:pointer;}
+
+/*svg画图*/
+.svg{ text-align:center; margin:30px auto 0; width:720px; height:500px; position:relative;}
+.svg .glyphicon{ font-size:16px;position:absolute;}
+.equ_green{ color:#18b328;}
+.equ_red{ color:#f90219;}
+.equ_yellow{ color:#f4ad3c;}
+.equ_grey{color:#a9a8a8;}
+#imask{width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    position:fixed;
+    z-index:5;
+    background-color:#000;
+    filter:alpha(Opacity=50);
+    -moz-opacity:0.5;
+    opacity: 0.5; display:none;}
+
+
+.svg_dialog{ display:none;z-index:20;left:50%;top:50%;margin-left:-325px;position:absolute;margin-top:-205px; width:650px; height:410px; background:#fff;}
+
+.dialog_tit{border-bottom:1px solid #d7d7d7; padding:0 12px 0 35px; line-height:38px;background:url(../images/eyes.png) no-repeat 8px 13px; font-size:14px;}
+.dialog_tit span{ display:block; float:right; cursor:pointer;}
+.dialog_info{ line-height:38px; background:#363535; color:#fff; overflow:hidden; font-size:14px;}
+.dialog_info_margin{ margin-right:17px;line-height:38px; background:#363535; color:#fff; overflow:hidden; font-size:14px;}
+.dialog_info_margin .col-xs-4{ margin:0; padding:0; text-align:center;}
+.dialog_info .col-xs-4{ margin:0; padding:0; text-align:center;}
+.dialog_table{ padding:10px 10px 10px 10px;}
+.dialog_table_padding{ padding:10px 10px 10px 10px;}
+.dialog_th{}
+.dialog_th_margin{ margin-right:17px;}
+.dialog_th table{background:#e9e9e9; line-height:32px;}
+.dialog_th td{border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc; text-align:center}
+.dialog_th_margin table{background:#e9e9e9; line-height:32px;}
+.dialog_th_margin td{border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc; text-align:center}
+
+
+.dialog_td{ max-height:272px; overflow:auto; overflow-x:hidden;}
+.dialog_td table{border:1px solid #ccc; border-collapse:collapse;}
+.dialog_td table td{border:1px solid #ccc;text-align:center; padding:5px 4px;}
+.dialog_td .tab_l{ text-align:left;}
+.dialog_td .tab_img .dialog_imgShow{margin:0 0 0 7px;}
+.dialog_td .tab_img .dialog_imgShow:first-child{margin-left:0;}
+
+#imgbox-loading {position: absolute;top: 0;left: 0;	cursor: pointer;display: none;z-index: 90;}
+#imgbox-loading div {background: #FFF;width: 100%;height : 100%;}
+#imgbox-overlay {position: absolute;top: 0;	left: 0;width: 100%;height: 100%;background: #000;display: none;z-index: 80;}
+.imgbox-wrap {position: absolute;top: 0;left: 0;display: none;	z-index: 90;}
+.imgbox-img {padding: 0;margin: 0;border: none;width: 100%;	height: 100%;vertical-align: top;}
+.imgbox-title {	padding-top: 10px;font-size: 11px;text-align: center;font-family: Arial;color: #333;display: none;}
+.imgbox-bg-wrap {position: absolute;padding: 0;margin: 0;display: none;}
+.imgbox-bg {position: absolute;width: 20px;	height: 20px;}
+
+/*自定义滚动条样式*/
+::-webkit-scrollbar{ width:8px;height:8px;background-color: #F5F5F5;}
+::-webkit-scrollbar-track { background-color: #fff;}
+::-webkit-scrollbar-thumb{ border-radius: 10px;border:3px solid #fff;margin:5px;background-color: #e0e0e0;}
+
+.dialog_td::-webkit-scrollbar  {
+    width: 17px;  
+    height: 8px;  
+    background-color: #F5F5F5;  
+} 
+.dialog_td::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #e0e0e0; border:2px solid #fff;
+}
+.dialog_td::-webkit-scrollbar-thumb:window-inactive {
+	background: #e0e0e0; 
+}
+
+
+/*
+.dialog_table{ padding:10px;}
+.dialog_th{border-left:1px solid #ccc;border-bottom:1px solid #ccc;border-top:1px solid #ccc;  overflow:hidden; background:#e9e9e9; line-height:30px;}
+.svg_dialog .col-xs-1{ padding:3px 1px;border-right:1px solid #ccc;  margin:0;text-align:center; width:10.33333333%;}
+.svg_dialog .col-xs-2{padding:3px 0;border-right:1px solid #ccc; margin:0;text-align:center}
+.svg_dialog .col-xs-6{ padding:3px 6px; border-right:1px solid #ccc;margin:0; width:46%;}
+.dialog_td{border-left:1px solid #ccc; border-bottom:1px solid #ccc; overflow:hidden;}
+.dialog_img{}
+.dialog_img img:first-child{margin-left:0;}
+.dialog_img img{margin:0 0 0 5px;}
+.dialog_row{min-height:40px;}
+.dialog_ms{ line-height:20px;}
+*/
+
+/*信息维护模块css*/
+/*右侧维护数据*/
+.information_right{width:240px; background:#dcdadb;float:left;float:right;}
+/*设备信息*/
+.information_tit{line-height:40px; font-size:14px; background:#202432 url(../images/information_tit_cion.png) no-repeat 12px 13px; padding-left:40px; color:#fff; margin-bottom:18px;}
+
+.fire_box{ margin:0 20px 18px 20px; background:#fff;}
+.title{ background:#505152; color:#fff; line-height:30px; padding-left:15px;}
+.fire_box .col-xs-4{ padding:0; text-align:center;}
+.fire_box .col-xs-8{ padding:0;}
+/*设备属性*/
+.fire_property{ padding:15px 10px 7px;border:#797979 solid 1px;}
+.fire_property_row{ margin:0 0 8px; overflow:hidden;}
+.input_plus .plus_add{ background:#eeeeee; border:#c1c3c6 solid 1px;border-radius:3px 0 0 3px; width:20px; height:20px; line-height:20px; text-align:center; float:left; line-height:18px;}
+.input_plus .plus_del{ background:#eeeeee; border:#c1c3c6 solid 1px;border-radius:0 3px 3px 0; width:20px; height:20px; line-height:20px; text-align:center; float:left; line-height:18px;}
+.input_plus input{line-height:20px;height:20px; border:#c1c3c6 solid 1px; border-left:none; border-right:none; float:left; width:60px; text-indent:5px;padding:0;margin:0;}
+
+/*设备列表*/
+.svg_Fire_list{ padding:15px 10px 15px; border:#797979 solid 1px;}
+.svg_Fire_list ul{list-style: none;border-top:1px solid #d5d5d5;}
+.svg_Fire_list ul li{ line-height:30px; border-bottom:1px solid #d5d5d5; padding-left:10px; cursor:pointer;}
+.svg_Fire_list ul li:hover{ background:#eeedee;}
+.svg_Fire_list ul li:hover span{border-left:4px solid #e96005;}
+.svg_Fire_list ul li span{ float: left; margin:12px 10px 0 0; display: inline-block;   width: 0;   height: 0;   border-top: 4px solid transparent;   border-left:4px solid #a2a3a3;
+border-bottom:4px solid transparent;}
+
+
+.button_fire{font-size:14px;border:#a2a3a3 solid 1px;border-radius:2px; height:28px;vertical-align:middle ;display:inline-block; line-height:24px;padding:0 12px;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f3f3f2,endColorStr=#b3b2b3); /*IE 6 7 8*/ 
+background: -ms-linear-gradient(top, #f3f3f2,  #b3b2b3);        /* IE 10 */
+background:-moz-linear-gradient(top,#f3f3f2,#b3b2b3);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f3f3f2), to(#b3b2b3));/*谷歌*/ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f3f3f2), to(#b3b2b3));      /* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(top, #f3f3f2, #b3b2b3);   /*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(top, #f3f3f2, #b3b2b3);  /*Opera 11.10+*/
+}
+.button_fire:before {background:#c1bfbf;}
+.button_fire:active { background:#d2d1d1;}
+.button_fire:focus{outline:0 !important}
+
+
+.fire_btn{margin:0 20px 0 20px;}
+.fire_btn button{ padding:0 33px;}
+.fire_btn .btn_right{ float:right;}
+
+/*中间svg图部分*/
+.information_center{ margin-left:190px; margin-right:240px;}
+
+.condition{ padding:10px;}
+.condition_select{ float:left; margin-right:8px;}
+.condition_select .btn{ padding:3px 28px 3px 10px;border-radius:2px;}
+.condition_select .form-control{ height:30px; line-height:30px;}
+.condition_select .dropdown-menu{ font-size:12px; margin-top:0;border-radius:2px;}
+.condition_select .dropdown-menu>li>a{ padding:3px 0px 3px 10px;}
+.bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark{ margin-top:3px; }
+
+
+.btn_fire{ font-size:14px;border:#a2a3a3 solid 1px;border-radius:2px; height:28px; line-height:24px;vertical-align:middle ;display:inline-block; padding:0 12px; margin-right:8px;
+FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#f6f5f5,endColorStr=#c9c8c9); /*IE 6 7 8*/ 
+background: -ms-linear-gradient(top, #f6f5f5,  #c9c8c9);        /* IE 10 */
+background:-moz-linear-gradient(top,#f6f5f5,#c9c8c9);/*火狐*/ 
+background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#f6f5f5), to(#c9c8c9));/*谷歌*/ 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f6f5f5), to(#c9c8c9));      /* Safari 4-5, Chrome 1-9*/
+background: -webkit-linear-gradient(top, #f6f5f5, #c9c8c9);   /*Safari5.1 Chrome 10+*/
+background: -o-linear-gradient(top, #f6f5f5, #c9c8c9);  /*Opera 11.10+*/
+}
+.btn_fire:before {background:#c1bfbf;}
+.btn_fire:active { background:#d2d1d1;}
+.btn_fire:focus{outline:0 !important}

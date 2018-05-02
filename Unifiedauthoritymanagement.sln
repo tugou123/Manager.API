@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unifiedauthoritymanagement", "Unifiedauthoritymanagement\Unifiedauthoritymanagement.csproj", "{F4945C8D-AD06-4ADD-B29C-75F9BE0AC5E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manager.API", "Manager.API\Manager.API.csproj", "{5F60A322-E7D2-4671-9387-BCA1C1B7CEAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4945C8D-AD06-4ADD-B29C-75F9BE0AC5E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4945C8D-AD06-4ADD-B29C-75F9BE0AC5E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4945C8D-AD06-4ADD-B29C-75F9BE0AC5E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4945C8D-AD06-4ADD-B29C-75F9BE0AC5E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F60A322-E7D2-4671-9387-BCA1C1B7CEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F60A322-E7D2-4671-9387-BCA1C1B7CEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F60A322-E7D2-4671-9387-BCA1C1B7CEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F60A322-E7D2-4671-9387-BCA1C1B7CEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20FBBE84-585B-4844-961A-F62D43F27851}
+	EndGlobalSection
+EndGlobal

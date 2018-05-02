@@ -1,0 +1,56 @@
+html,body{width:100%;height:100%;
+background-image:url(../../images/bg.jpg);
+-moz-background-size: 100% 100%;
+-o-background-size: 100% 100%;
+-webkit-background-size: 100% 100%;
+background-size: 100% 100%; font-size:12px; font-family:arial,Microsoft YaHei, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+*{ margin:0;padding:0;}
+.clear{ clear:both;}
+a{ color:#4a4a4a; text-decoration:none;}
+a:visited{ color:#4a4a4a;}
+a:hover{ color:#4a4a4a; text-decoration:none}
+ol,ul{ list-style:none; margin:0; padding:0;}
+p{ margin:0; padding:0;}
+
+.login{ width:376px; background-color: rgba(255,255,255,0.5);position:absolute;height:488px;left:50%;top:50%;margin-left:-188px;margin-top:-244px; }
+@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+  .login{
+    background-color:#ffffff;
+    filter:Alpha(opacity=50);
+    position:static; /* IE6、7、8只能设置position:static(默认属性) ，否则会导致子元素继承Alpha值 */
+    *zoom:1; /* 激活IE6、7的haslayout属性，让它读懂Alpha */
+  }
+  .login .login_con{
+    position: relative;/* 设置子元素为相对定位，可让子元素不继承Alpha值 */
+  }  
+}
+ 
+.login_con{ padding:0 35px;}
+.logion_topnav{ width:120px; background:url(../../images/login_top_nav.png) no-repeat left top; height:39px; color:#fff; float:right; overflow:hidden;}
+.logion_topnav p{ background:url(../../images/login_top_cion.png) no-repeat 14px 10px; padding-left:43px; line-height:39px; font-size:16px; cursor:pointer;}
+
+.logoinfo{ font-size:30px; text-align:center; padding:55px 0; color:#2a2a2a;}
+.registerinfo{font-size:30px; text-align:center; padding:40px 0; color:#2a2a2a;}
+
+.login_name{ position:absolute; left:16px;top:12px;}
+.login_input{ position:relative; margin-bottom:13px; overflow:hidden;}
+.login_input .form-control{ border:1px solid #aaaaaa; height:45px; line-height:45px; padding:0 10px 0 48px;
+border-radius:2px; color:#969494;}
+
+
+.login_input .col-xs-3{  padding:0 5px 0 0; font-size:14px; line-height:45px; text-align:right;}
+.login_input .col-xs-9{ padding:0;}
+.login_input .col-xs-9 .form-control{ padding:0 10px 0 10px;}
+.login_chk{ text-align:right; margin-bottom:40px;}
+.login_chk span{ color:#e15e07;cursor:pointer;}
+
+
+.register_chk{ text-align:center;margin-top:30px; margin-bottom:3px;}
+.register_chk .checkbox{ margin:0; padding:0;}
+.chk_num{ text-align:left;}
+.login_chk .checkbox{ float:left; margin:0; padding:0;}
+input[type=checkbox], input[type=radio]{ margin:2px 0 0;}
+.login_btn{}
+.login_btn .form-control{ background:#e96005; height:44px; border:0; font-size:16px;}
+
