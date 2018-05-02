@@ -13,7 +13,10 @@ namespace Manager.API
     {
         protected void Application_Start()
         {
+            var configpx = Orleans.Runtime.Configuration.ClientConfiguration.LocalhostSilo();
             
+            GrainClient.Initialize(configpx);
+          
             GlobalConfiguration.Configure(WebApiConfig.Register);
            
         }

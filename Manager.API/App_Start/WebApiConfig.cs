@@ -52,8 +52,7 @@ namespace Manager.API
             };           
             config.EnableCors(globalCors);
             config.Filters.Add(new ModeVlidataGlobalFilte());
-            var configpx = Orleans.Runtime.Configuration.ClientConfiguration.LocalhostSilo();
-            GrainClient.Initialize(configpx);
+          
             // config.MessageHandlers.Add(new MessageHanlder());
             //消息机制
             //错误机制

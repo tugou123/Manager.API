@@ -17,8 +17,8 @@ namespace Manager.API.Controllers
     {
 
         private int Token = 0;
-        IUserComponet _userComponet;
-        ISysLogComponet logRep;
+      
+
      
 
         /// <summary>
@@ -30,8 +30,8 @@ namespace Manager.API.Controllers
         [AllowAnonymous]
         public async Task <WebApiResult> Login([FromBody]LoginUser user)
         {
-            _userComponet = GrainClient.GrainFactory.GetGrain<IUserComponet>("key");
-            logRep = GrainClient.GrainFactory.GetGrain<ISysLogComponet>("key");
+            IUserComponet  _userComponet = GrainClient.GrainFactory.GetGrain<IUserComponet>("key");
+            ISysLogComponet logRep = GrainClient.GrainFactory.GetGrain<ISysLogComponet>("key");
             string username = user.UserName;
             string password = user.Password;
             bool IsRememberMe = user.RemenberMe;
@@ -132,7 +132,7 @@ namespace Manager.API.Controllers
                 Id=1,              
             };
 
-            logRep.Update(log);
+          //  logRep.Update(log);
             //System.Web.Security.FormsAuthentication.SignOut();
             UserTokenManager.RemoveToken(this.Token);
             return new WebApiResult()
