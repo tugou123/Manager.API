@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  nmanager.api:
+    image: nmanager.api
+    build:
+      context: .\NManager.API
+      dockerfile: Dockerfile

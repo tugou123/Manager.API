@@ -8,5 +8,12 @@ namespace Unifiedauthoritymanagement
 {
     public class BaseController: Controller
     {
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            base.OnActionExecuting(filterContext);
+          
+          //  Response.Redirect("/Login/Index");
+
+        }
     }
 }

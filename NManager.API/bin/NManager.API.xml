@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NManager.API</name>
+    </assembly>
+    <members>
+        <member name="T:Manager.API.App_Start.ApiAuthorizeAttribute">
+            <summary>
+            登陆验证
+            </summary>
+        </member>
+        <member name="M:Manager.API.App_Start.ApiAuthorizeAttribute.HandleUnauthorizedRequest(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            返会 404
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="M:Manager.API.App_Start.ApiAuthorizeAttribute.OnAuthorization(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            验证
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="M:Manager.API.App_Start.ApiAuthorizeAttribute.IsAuthorized(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            验证
+            </summary>
+            <param name="actionContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Manager.API.App_Start.FilterConfig">
+            <summary>
+            全局过滤器
+            </summary>
+        </member>
+        <member name="M:Manager.API.App_Start.FilterConfig.RegisterGlobalFilters(System.Web.Http.Filters.HttpFilterCollection)">
+            <summary>
+            
+            </summary>
+            <param name="collection"></param>
+        </member>
+        <member name="T:Manager.API.App_Start.ModeVlidataGlobalFilte">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Manager.API.App_Start.ModeVlidataGlobalFilte.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
+            <summary>
+            11111
+            </summary>
+            <param name="actionContext"></param>
+        </member>
+        <member name="M:NManager.API.Controllers.AccountController.Login(Manager.Model.InputeMode.LoginUser)">
+            <summary>
+            登录
+            </summary>
+            <param name="user">登录人员信息： 账号，密码 ，是否记住密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:NManager.API.Controllers.AccountController.SignOut">
+            <summary>
+            退出当前账号
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NManager.API.Controllers.HomeController.Token(Manager.Model.InputeMode.LoginUser)">
+            <summary>
+            获取Token
+            </summary>
+            <param name="loginUser"></param>
+            <returns></returns>
+        </member>
+        <member name="T:NManager.API.Models.SwaggerAddRequirHeaderParmeter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NManager.API.Models.SwaggerAddRequirHeaderParmeter.Apply(Swashbuckle.Swagger.Operation,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="operation"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiDescription"></param>
+        </member>
+        <member name="P:NManager.API.Models.WebApiResult.Code">
+            <summary>
+            返回代码
+            </summary>
+        </member>
+        <member name="T:NManager.API.TokenManager.Tokens">
+            <summary>
+            登陆Token
+            </summary>
+        </member>
+        <member name="P:NManager.API.TokenManager.Tokens.StaffId">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:NManager.API.TokenManager.Tokens.SignToken">
+            <summary>
+            用户名对应签名Token
+            </summary>
+        </member>
+        <member name="P:NManager.API.TokenManager.Tokens.ExpireTime">
+            <summary>
+            Token过期时间
+            </summary>
+        </member>
+        <member name="T:NManager.API.TokenManager.TokenResultMsg">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:NManager.API.TokenManager.TokenResultMsg.InitCache(NManager.API.TokenManager.Tokens)">
+            <summary>
+            
+            </summary>
+            <param name="tokens"></param>
+        </member>
+        <member name="M:NManager.API.TokenManager.TokenResultMsg.RemoveToken(System.Int32)">
+            <summary>
+            移除Token
+            </summary>
+            <param name="staffId"></param>
+        </member>
+        <member name="M:NManager.API.TokenManager.UserTokenManager.IsExistToken(System.String)">
+            <summary>
+            判断令牌是否存在
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NManager.API.TokenManager.UserTokenManager.RemoveToken(NManager.API.TokenManager.UserToken)">
+            <summary>
+            移除指定令牌
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

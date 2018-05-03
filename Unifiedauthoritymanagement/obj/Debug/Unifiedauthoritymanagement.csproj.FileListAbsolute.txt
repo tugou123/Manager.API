@@ -225,7 +225,6 @@ G:\Authoritymanager\Web\Unifiedauthoritymanagement\bin\zh-Hans\System.Web.WebPag
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\bin\zh-Hans\System.Net.Http.Formatting.resources.dll
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\bin\zh-Hans\System.Web.Http.resources.dll
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\bin\zh-Hans\System.Web.Http.WebHost.resources.dll
-G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.csprojResolveAssemblyReference.cache
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.csproj.CoreCompileInputs.cache
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.dll
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.pdb

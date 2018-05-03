@@ -1,4 +1,5 @@
-﻿using Orleans;
+﻿using Manager.API.App_Start;
+using Orleans;
 using Orleans.Runtime;
 using Orleans.Runtime.Configuration;
 using System;
@@ -11,7 +12,7 @@ using System.Web.Http;
 
 namespace Manager.API.Controllers
 {
-
+    [ApiAuthorize] 
     public class BaseController : ApiController
     {
     #if DEBUGM  
