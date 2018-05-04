@@ -50,6 +50,8 @@ namespace NManager.API.Controllers
             {
                 u = loginResult.loginUser;
                 var _tokens= TokenResultMsg.Createtoken(u.Id);
+
+               
                 //UserTokenManager.AddToken(ut);
             
 

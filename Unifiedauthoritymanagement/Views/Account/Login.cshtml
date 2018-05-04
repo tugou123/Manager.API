@@ -153,13 +153,13 @@
            
               
                              $.ajax({
-                                 url: 'http://manager.api.com/Account/Login',
+                                 url: 'http://localhost:52564/Account/Login',
                                  data: { userName: $("#signup_name").val(), password: $("#signup_password").val() },
                                   dataType: 'Json',
                                   type: 'POST',
                                   success: function (data) {
                                       if (data.code == 0) {
-                                          sessionStorage.setItem("token", data.data.token.signToken);//保存滚动位置
+                                          localStorage.setItem("token", data.data.token);//保存滚动位置
                                           window.location = 'http://unifiedauthority.web.com/' + data.data.targetUrl;  
                                           } else {
                                           $.hulla.send(data.message, "danger");

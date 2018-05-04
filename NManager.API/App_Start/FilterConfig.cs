@@ -30,12 +30,11 @@ namespace Manager.API.App_Start
     public class ModeVlidataGlobalFilte:ActionFilterAttribute
     {
         /// <summary>
-        /// 11111
+        /// 验证修改
         /// </summary>
         /// <param name="actionContext"></param>
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
-            /////
             var modestate = actionContext.ModelState;
             if (!modestate.IsValid)
             {

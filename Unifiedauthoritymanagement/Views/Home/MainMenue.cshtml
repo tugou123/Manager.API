@@ -6,7 +6,11 @@
 <h2>MainMenue</h2>
 
 <button type="button" class="btn-warning form-control" onclick="tic()">立即注册</button>
+<script src="~/Scripts/Mhjs/MyAjax.js"></script>
 <script>
+
+   
+
     function tic() {
         //$.ajax({
         //    type: "POST",
@@ -24,24 +28,24 @@
       //  http://manager.api.com/Home/Demo
         //    }
         //});
-        var token = sessionStorage.getItem("token");
+     
         console.log(token)
         $.ajax({
-            type: "POST",
+            type: "get",
             url: "http://localhost:52564/Home/Demo",
             data: { Id:1},
             contentType: "application/json",
             dataType: "json",
-            beforeSend: function (request) {
-                request.setRequestHeader("Authorization", token);
-            },
+            //beforeSend: function (request) {
+            //   // request.setRequestHeader('Authorization', 'Basic ' + $.cookie("userToken")); 
+            //    request.setRequestHeader("token", token);
+            //},
             success: function (data) {
+              
                 console.log(data)
                 alert("////")
             },
-            error: function (data) {
-
-            }
+           
         });        
     }
 </script>

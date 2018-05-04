@@ -46,7 +46,7 @@
         </member>
         <member name="M:Manager.API.App_Start.ModeVlidataGlobalFilte.OnActionExecuting(System.Web.Http.Controllers.HttpActionContext)">
             <summary>
-            11111
+            验证修改
             </summary>
             <param name="actionContext"></param>
         </member>
@@ -113,7 +113,7 @@
             
             </summary>
         </member>
-        <member name="M:NManager.API.TokenManager.TokenResultMsg.InitCache(NManager.API.TokenManager.Tokens)">
+        <member name="M:NManager.API.TokenManager.TokenResultMsg.InitCache(System.String,NManager.API.TokenManager.Tokens)">
             <summary>
             
             </summary>
@@ -124,6 +124,13 @@
             移除Token
             </summary>
             <param name="staffId"></param>
+        </member>
+        <member name="M:NManager.API.TokenManager.TokenResultMsg.IsExistToken(System.String)">
+            <summary>
+            验证token
+            </summary>
+            <param name="token"></param>
+            <returns></returns>
         </member>
         <member name="M:NManager.API.TokenManager.UserTokenManager.IsExistToken(System.String)">
             <summary>

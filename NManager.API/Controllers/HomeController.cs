@@ -60,7 +60,7 @@ namespace NManager.API.Controllers
 
             };
         }
-        [HttpPost]
+        [HttpGet]
         /// <summary>
         /// 急啊急啊急急急啊
         /// </summary>

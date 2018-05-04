@@ -15,12 +15,16 @@
         var _options = $.extend({}, {
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 fn.error(XMLHttpRequest, textStatus, errorThrown);
+                if (textStatus == 401)
+                    window.location = "http://unifiedauthority.web.com/"
             },
             success: function (data, textStatus) {
                 fn.success(data, textStatus);
             },
             beforeSend: function (XHR) {
-                XHR.setRequestHeader('Authorization', 'BasicAuth ' + Ticket);
+               // var token = localStorage.getItem("token");
+               // XHR.setRequestHeader('Authorization', 'BasicAuth ' + Ticket);
+                XHR.setRequestHeader("Token", localStorage.getItem("token"));
                 fn.beforeSend(XHR);
             },
             complete: function (XHR, TS) {

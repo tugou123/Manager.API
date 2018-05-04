@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Web;
+using System.Web.Caching;
 
 namespace NManager.API.TokenManager
 {
@@ -39,12 +40,13 @@ namespace NManager.API.TokenManager
     {
 
        
-        public static Tokens Createtoken(int staffId)
+        public static string Createtoken(int staffId)
         {
+            //token 产生 规则(用户ID+时间戳+)
             RemoveToken(staffId);
             // 生成新Token
-            var token = DESEncrypt.Encrypt(string.Format("{0}{1}", Guid.NewGuid().ToString("D"), DateTime.Now.Ticks));
-            token = token.Substring(11, 31);
+            var _tokens = string.Format("{0}{1}", Guid.NewGuid().ToString(), DateTime.Now.Ticks);
+            var token = DESEncrypt.Encrypt(_tokens,"kyes");
             // token过期时间
             int timeout = 8;
             if (!int.TryParse(ConfigurationManager.AppSettings["TokenTimeout"], out timeout))
@@ -53,26 +55,31 @@ namespace NManager.API.TokenManager
             var ut = new Tokens()
             {
                 StaffId= staffId,
-                SignToken = token,
-                ExpireTime = DateTime.Now.AddHours(timeout),
+                SignToken = _tokens,
+                ExpireTime = DateTime.Now.AddMinutes(5),
                 
             };
-            InitCache(ut);
-            return ut;
+            InitCache(token, ut);
+            return token;
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="tokens"></param>
-        public static void InitCache(Tokens tokens)
+        public static void InitCache(string tokenname, Tokens tokens)
         {
             if (tokens == null)
                 return;
-            var tokenname = tokens.ToString();
+           
             //if (HttpRuntime.Cache[tokenname]==null)
-            HttpRuntime.Cache.Insert(tokens.StaffId.ToString(), tokens, null, System.Web.Caching.Cache.NoAbsoluteExpiration, TimeSpan.FromDays(7 * 2));
-          
+            HttpRuntime.Cache.Insert(tokenname, tokens, null, DateTime.Now.AddMinutes(5), System.Web.Caching.Cache.NoSlidingExpiration);
+            //HttpRuntime.Cache.Insert(tokens.StaffId.ToString(), tokens, 
+            //    new CacheDependency(@"D:\123.txt"),DateTime.Now.AddMinutes(3),
+            //    TimeSpan.FromMinutes(7),CacheItemPriority.Default,null);
+
+            //var token = HttpRuntime.Cache.Get(tokens.StaffId.ToString());
+
 
         }
         /// <summary>
@@ -88,7 +95,35 @@ namespace NManager.API.TokenManager
             
         }
 
+        /// <summary>
+        /// 验证token
+        /// </summary>
+        /// <param name="token"></param>
+        /// <returns></returns>
+        public static bool IsExistToken(string token)
+        {
+            if (string.IsNullOrEmpty(token))
+                return false;
+            var _token = DESEncrypt.Decrypt(token, "kyes");
 
+            var tokes = HttpRuntime.Cache[token] as Tokens;
+            if(tokes ==null|| tokes.SignToken!= _token)
+            {
+                return false;
+            }
+            else
+            {
+                if (tokes.ExpireTime <= DateTime.Now)
+                {
+                    tokes.ExpireTime = DateTime.Now.AddMinutes(5);
+                    InitCache(token,tokes);
+                }
+
+                return true;
+            }
+           
+
+        }
     }
 
 

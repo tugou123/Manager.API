@@ -228,3 +228,4 @@ G:\Authoritymanager\Web\Unifiedauthoritymanagement\bin\zh-Hans\System.Web.Http.W
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.csproj.CoreCompileInputs.cache
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.dll
 G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.pdb
+G:\Authoritymanager\Web\Unifiedauthoritymanagement\obj\Debug\Unifiedauthoritymanagement.csprojResolveAssemblyReference.cache
