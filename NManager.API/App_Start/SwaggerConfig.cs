@@ -35,6 +35,7 @@ namespace NManager.API
                         //
                         c.SingleApiVersion("v1", "NManager.API");
                         c.OperationFilter(() => new SwaggerAddRequirHeaderParmeter());
+                       
                         c.IncludeXmlComments(GetDocumnetXMLPath);
                         // If you want the output Swagger docs to be indented properly, enable the "PrettyPrint" option.
                         //
