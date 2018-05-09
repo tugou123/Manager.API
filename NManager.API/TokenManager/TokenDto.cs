@@ -22,12 +22,10 @@ namespace NManager.API.TokenManager
         /// 用户名
         /// </summary>
         public int StaffId { get; set; }
-
         /// <summary>
         /// 用户名对应签名Token
         /// </summary>
         public string SignToken { get; set; }
-
         /// <summary>
         /// Token过期时间
         /// </summary>
@@ -38,8 +36,6 @@ namespace NManager.API.TokenManager
     /// </summary>
     public class TokenResultMsg
     {
-
-       
         public static string Createtoken(int staffId)
         {
             //token 产生 规则(用户ID+时间戳+)
